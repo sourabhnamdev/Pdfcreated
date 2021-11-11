@@ -28,7 +28,8 @@ public class JavaPdfHelloWorld {
 	 
 	@Autowired
 	CustomerRepository customerRepository;
-
+ 
+ 
 	@GetMapping(value = "/customers")
 	public ResponseEntity<InputStreamResource> customerReport(HttpServletResponse response) throws IOException {
 		List<Customer> customers = (List<Customer>) customerRepository.findAll();
